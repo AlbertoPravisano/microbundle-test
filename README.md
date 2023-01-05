@@ -27,7 +27,7 @@ Seems similiar to https://github.com/developit/microbundle/issues/820
 # To replicate
 
 ```
-git clone https://github.com/AlbertoPravisano/microbundle-test
+git clone https://github.com/AlbertoPravisano/microbundle-test.git
 cd microbundle-test/
 npm install
 npm build
