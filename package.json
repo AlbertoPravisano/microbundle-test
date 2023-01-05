@@ -1,0 +1,42 @@
+{
+  "name": "microbundle-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "module": "dist/index.modern.js",
+  "source": "src/index.js",
+  "engines": {
+    "node": ">=16"
+  },
+  "scripts": {
+    "build": "microbundle --no-compress --no-css-modules --no-sourcemap --format modern,cjs --jsx React.createElement --jsxFragment React.Fragment",
+    "start": "microbundle watch --no-compress --no-css-modules --no-sourcemap --format modern,cjs --jsx React.createElement --jsxFragment React.Fragment",
+    "postbuild": "cd example && npm link ../ && npm run build"
+  },
+  "dependencies": {
+    "prop-types": "^15.8.1",
+    "postcss-flexbugs-fixes": "^5.0.2",
+    "postcss-normalize": "^10.0.1",
+    "postcss-preset-env": "^7.8.3"
+  },
+  "devDependencies": {
+    "fomantic-ui-css": "^2.9.0",
+    "microbundle": "^0.15.1",
+    "moment": "^2.29.4",
+    "prettier": "^2.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "^5.0.1"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "moment": "^2.29.4",
+    "fomantic-ui-css": "^2.9.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [],
+  "license": "ISC"
+}
