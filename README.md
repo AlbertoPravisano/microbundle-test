@@ -23,3 +23,14 @@ Seems similiar to https://github.com/developit/microbundle/issues/820
     "start": "microbundle watch --no-compress --no-css-modules --no-sourcemap --format modern,cjs --jsx React.createElement --jsxFragment React.Fragment",
   },
 ```
+
+# To replicate
+
+```
+git clone https://github.com/AlbertoPravisano/microbundle-test
+cd microbundle-test/
+npm install
+npm build
+cd example/
+npm start
+```
