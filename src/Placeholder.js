@@ -1,19 +1,19 @@
 import React from "react";
 import { number, node, oneOfType, arrayOf } from "prop-types";
 
-// [...Array(nLines)] = [null, null, ...]
+// [...Array(nLines)].map((_, index) => console.log(index)); // This prints nothing, but is correct on browser
 // [...Array(nLines).keys()] = [{}]
 
 const generateLinesBad = (nLines) => {
-  return [...Array(nLines)].map((_, index) => (
-    <div key={index} className="line" />
-  ));
+  return [...Array(nLines)].map((_, index) => {
+    return <div key={index} className="line" />;
+  });
 };
 
 const generateLinesBad2 = (nLines) => {
-  return [...Array(nLines).keys()].map((index) => (
-    <div key={index} className="line" />
-  ));
+  return [...Array(nLines).keys()].map((index) => {
+    return <div key={index} className="line" />;
+  });
 };
 
 // This works
